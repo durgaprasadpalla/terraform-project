@@ -4,9 +4,9 @@ region = "ap-southeast-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0182f373e66f89c85"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "Prasadpair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   user_data       = <<EOF
@@ -15,7 +15,7 @@ sudo -i
 yum install httpd -y
 systemctl start httpd
 chkconfig httpd on
-echo "hai all this is my app created by terraform infrastructurte by raham sir server-1" > /var/www/html/index.html
+echo "hai all this is my app created by terraform infrastructurte by prasad server-1" > /var/www/html/index.html
 EOF
   tags = {
     Name = "web-server-1"
@@ -23,9 +23,9 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0182f373e66f89c85"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "Prasadpair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   user_data       = <<EOF
@@ -34,7 +34,7 @@ sudo -i
 yum install httpd -y
 systemctl start httpd
 chkconfig httpd on
-echo "hai all this is my website created by terraform infrastructurte by raham sir server-2" > /var/www/html/index.html
+echo "hai all this is my website created by terraform infrastructurte by prasad server-2" > /var/www/html/index.html
 EOF
   tags = {
     Name = "web-server-2"
@@ -42,9 +42,9 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0182f373e66f89c85"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "Prasadpair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   tags = {
@@ -53,9 +53,9 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0182f373e66f89c85"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "Prasadpair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   tags = {
@@ -88,7 +88,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "devopsbyrahamterraserverbucket9988oo9988"
+  bucket = "terraserverbucket9988oo9988"
 }
 
 resource "aws_iam_user" "seven" {
