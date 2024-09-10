@@ -98,7 +98,7 @@ resource "aws_instance" "four" {
 
 # S3 Bucket
 resource "aws_s3_bucket" "six" {
-  bucket = "terraserverbucket9988oo9988"
+  bucket = "prasadbucket"
 }
 
 # IAM Users (looped over user names)
@@ -117,7 +117,7 @@ variable "user_names" {
 # EBS Volume
 resource "aws_ebs_volume" "eight" {
   availability_zone = "ap-southeast-1a"
-  size              = 40
+  size              = 100
 
   tags = {
     Name = "ebs-001"
